@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="shiny">Shiny Sprite</string>
+    <string name="sprite">Sprite</string>
+    <string name="search">Search Pokemon</string>
+    <string name="enter">Enter Name or Number</string>
+    <string name ="random">Random Pokemon</string>
+    <string name = "welcome">Welcome to your Pokedex! You can get information on a random pokemon or search for a specific one!</string>
+</resources>

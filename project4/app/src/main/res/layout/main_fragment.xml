@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="myModel"
+            type="com.project4.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <TextView
+            android:id="@+id/shinyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="4dp"
+            android:text="@{myModel.shinyText}"
+            app:layout_constraintBottom_toTopOf="@+id/sprite2"
+            app:layout_constraintEnd_toEndOf="@+id/sprite2" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="237dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="138dp"
+            android:layout_marginBottom="139dp"
+            android:text="@{myModel.title}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/shinyLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="156dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="24dp"
+            android:text="@{myModel.type}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spriteLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="13dp"
+            android:text="@{myModel.id}"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="149dp"
+            android:layout_height="98dp"
+            android:layout_marginBottom="31dp"
+            android:text="@string/random"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/sprite"
+            android:layout_width="158dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="206dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sprite2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/sprite2"
+            android:layout_width="158dp"
+            android:layout_height="146dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sprite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sprite"
+            app:layout_constraintTop_toTopOf="@+id/sprite"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/spriteLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{myModel.spriteText}"
+            app:layout_constraintBottom_toTopOf="@+id/sprite"
+            app:layout_constraintEnd_toEndOf="@+id/sprite"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/welcomeMessage"
+            android:layout_width="301dp"
+            android:layout_height="165dp"
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.496" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
